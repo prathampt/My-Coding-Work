@@ -1,4 +1,6 @@
 
+# More about constructor...
+
 class Programmer:
     company = "Google"
 
@@ -54,6 +56,7 @@ class Programmer3:
 pra = Programmer3("Pratham", 1000000, 9766504701)
 pra.Data()
 
+# Inheritance...
 
 class Employee(Programmer3):
 

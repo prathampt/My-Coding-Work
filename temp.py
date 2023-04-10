@@ -1,4 +1,6 @@
 
+
+
 import random
 
 ListofPassengers = []
@@ -34,19 +36,21 @@ class TrainTicket:
         print("Number of Passengers are, ", len(ListofPassengers))
 
 
+# print(".vscode\")
+x= int(input("enter  the key"))
 
-
-for i in range(1, 8):
+if x==1:
     Train1 = TrainTicket(input("Enter your name...\n"))
     Train1.CheckAvailability()
     Reg = input("To Register confirm 'Yes'...\n")
     if Reg == "yes" or Reg == "Yes":
         Train1.Registeration()
+else:
+    print("List of Passangers are...\n", ListofPassengers)
+    print("Confirmation List is, \n", PassangersDictionary)
 
-print("List of Passangers are...\n", ListofPassengers)
-print("Confirmation List is, \n", PassangersDictionary)
+    Train1.CancelTicket()
 
-Train1.CancelTicket()
+    print("List of Passangers are...\n", ListofPassengers)
+    print("Confirmation List is, \n", PassangersDictionary)
 
-print("List of Passangers are...\n", ListofPassengers)
-print("Confirmation List is, \n", PassangersDictionary)
