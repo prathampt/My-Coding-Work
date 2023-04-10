@@ -38,8 +38,8 @@ def Coder():
         the_code = the_code + j
 
     print(f"Your code is below this line... ** Please copy the whole line... **\n\n{the_code}\n\nYou can also find the code in 'Coder.txt'")
-    with open("D:\Programming\Python\Coder.txt", "a") as y:
-        y.write(f"\nNew code is : \n{the_code}")
+    with open("D:\Programming\Python\Coder.txt", "a") as p:
+        p.write(f"\nNew code is : \n{the_code}")
 
 # Decoder...
 
