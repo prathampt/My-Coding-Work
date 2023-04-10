@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "text": "\n\nlogin_id = input(\"Enter your login id: \")\npassword = input(\"Enter your password: \")\n\nif login_id == \"admin\" and password == \"123456\":\n    print(\"Login successful!\")\nelse:\n    print(\"Incorrect login id or password!\")"
+    }
+  ],
+  "created": 1665551327,
+  "id": "cmpl-60OH1tuAdAOQ7Hk7NhdR9wsd697Gm",
+  "model": "text-davinci-002",
+  "object": "text_completion",
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 12,
+    "total_tokens": 78
+  }
+}'''
+
+\n\nfrom flask import Flask, render_template\n\napp = Flask(__name__)\n\n\n@app.route(\"/\")\ndef index():\n    return render_template(\"index.html\")\n\n\nif __name__ == \"__main__\":\n    app.run()
+
+'''
+'''
+
+\n\nAssuming you want to show the password of a wifi network you are currently connected to:\n\nimport subprocess\n\ncmd = subprocess.check_output([\"netsh\", \"wlan\", \"show\", \"profiles\", \"username=current\"]).decode(\"utf-8\").split(\"\\n\")\n\ncmd = [i.split(\":\")[1][1:-1] for i in cmd if \"All User Profile\" in i]\n\nfor i in cmd:\n    results = subprocess.check_output([\"netsh\", \"wlan\", \"show\", \"profiles\", i, \"key=clear\"]).decode(\"utf-8\").split(\"\\n\")\n    results = [b.split(\":\")[1][1:-1] for b in results if \"Key Content\" in b]\n    try:\n        print(\"{:<30}|  {:<}\".format(i, results[0]))\n    except IndexError:\n        print(\"{:<30}|  {:<}\".format(i, \"\"))
+
+'''
