@@ -1,6 +1,6 @@
 a = "Nothing"
 print("Enter your to do task... Press enter when done...")
-todo = []
+todo = ["Code", "Write"]
 while a != "":
     a = input()
     todo.append(a)
